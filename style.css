@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+html {
+    font-family: var(--main-font);
+    overflow-x: hidden;
+}
+
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #5C3A93;
+    /* --secondary: #6C63FF; */
+    --secondary: #7851b6;
+    --contrast: #FFFFFF;
+    --light-color: #B0A8B9;
+    --main-font: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--light-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.contrast {
+    color: var(--contrast);
+}
+
+.button {
+    background-color: var(--primary);
+    padding: 1em;
+    color: var(--contrast);
+    text-decoration: none;
+    border-radius: 25px;
+    /* box-shadow: ; */
+}
+
+.button:focus {
+    background-color: var(--contrast);
+    color: var(--primary);
+}
+
+.primary-box {
+    color: var(--contrast);
+    background: var(--primary);
+    max-width: 20ch;
+    margin: 0 auto;
+    font-size: x-large;
+}
+
+.contrast-box {
+    color: var(--primary);
+    background: var(--contrast);
+    max-width: 40ch;
+    margin: 0 auto;
+    font-size: x-large;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+nav img {
+    margin-left: 2em;
+    max-width: 100%;
+    height: 5.8em;
+    background-color: var(--light-color);
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav a {
+    font-size: large;
+    padding: 2em;
+    text-decoration: none;
+    color: var(--contrast);
+    background-color: var(--primary);
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: var(--contrast);
+}
+
+.choose-us {
+    margin-top: -.5em;
+    color: var(--primary);
+    background: var(--contrast);
+    border: solid 20px var(--contrast);
+}
+
+#convincing-students-to-join {
+    margin-top: 10em;
+}
+
+#because {
+    display: inline-block;
+    margin-left: 4em;
+    padding: .5em;
+    font-size: xx-large;
+    color: var(--contrast);
+    background: var(--primary);
+}
+
+#we-have-professors {
+    padding: 5em;
+}
+
+#we-have-professors img{
+    max-width: 50%;
+    margin-bottom: 5em;
+}
+
+#our-students-our-priority img{
+    max-width: 80%;
+    padding: 5em;
+    margin-bottom: 5em;
+}
+
+#why-we-are-the-best {
+    padding: 5em;
+}
+
+#why-we-are-the-best-heading {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    font-size: xx-large;
+    box-shadow: black;
+}
+
+#why-we-are-the-best img {
+    max-width: 70%;
+    margin-bottom: 5%;
+}
+
+#not-convinced {
+    margin-bottom: 10em;
+}
+
+#images {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,2fr);
+    gap: 2.5em;
+    padding: 10em;
+    padding-top: 0em;
+    padding-bottom: 4em;
+}
+
+#faculties-section img{
+    width: 50vw;
+    height: 50vh;
+}
+
+#become-a-smartanian {
+    padding: 10em;
+    background-color: var(--secondary);
+    margin-bottom: 4em;
+}
+
+#become-a-smartanian div {
+    margin-top: 1em;
+    justify-content: center;
+}
+
+#become-a-smartanian .button {
+    margin-right: 1em;
+}
+
+#what-are-smartanians-up-to {
+    margin-bottom: 2em;
+}
+
+#news .contrast-box {
+    border-radius: 25px;
+    /* box-shadow: ; */
+}
+
+#news .grid{
+    display: grid;
+    background-color: var(--secondary);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    padding: 10em;
+    padding-top: 0;
+    gap: 5em;
+}
+
+#second-item {
+    grid-column: 2/4;
+    background-color: var(--primary);
+    color: var(--contrast);
+    padding: 4em;
+    text-align: center;
+}
+
+#third-item {
+    text-align: center;
+    padding: 4em;
+    background-color: var(--primary);
+    color: var(--contrast);
+}
+
+footer {
+    background-color: var(--contrast);
+}
+
+.links {
+    border-right: solid 1px var(--light-color);
+    text-align: center;
+    margin-right: 10%;
+    padding: 1.5em;
+    padding-top: 0;
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 0.9em;
+}
+
+.links a:hover {
+    background-color: var(--primary);
+    color: var(--contrast);
+}
+
+.links li {
+    margin-top: 1em;
+}
+
+#get-in-touch-btn {
+    padding: .5em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    display: inline-block;
+    text-align: center;
+}
+
+#get-in-touch img {
+    width: 3.5em;
+    margin-right: 1em;
+}
+
+#google-maps {
+    padding: 1em;
+    border-left: solid 1px var(--light-color);
+    margin-left: auto;
+}
+
+#google-maps p {
+    margin-top: 1em;
+    margin-right: 4em;
+    align-self: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+#google-maps img {
+    margin-top: 1em;
+    max-width: 11em;
+}
