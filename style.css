@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
 /* font-family: 'Montserrat', sans-serif; */
 
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--primary);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--contrast);
+    border-radius: 100vw;
+    border: .2em solid var(--primary);
+    height: 20vh;
+}
+
+@supports (scrollbar-color: var(--contrast) var(--primary)) {
+    * {
+        scrollbar-color: var(--contrast) var(--primary);
+    }
+}
+
 html {
     font-family: var(--main-font);
     overflow-x: hidden;
@@ -23,6 +45,14 @@ html {
 
 body {
     background-color: var(--light-color);
+}
+
+p {
+    font-size: 25px;
+}
+
+a {
+    font-size: 18px;
 }
 
 img {
@@ -104,15 +134,27 @@ nav a:hover {
     background-color: var(--contrast);
 }
 
+.white-box {
+    text-align: center;
+    margin-top: -1%;
+}
+
 .choose-us {
-    margin-top: -.5em;
+    display: inline;
+    padding: 20px;
     color: var(--primary);
     background: var(--contrast);
-    border: solid 20px var(--contrast);
+}
+
+.smartanians-img {
+    max-height: 140vh;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 #convincing-students-to-join {
-    margin-top: 10em;
+    margin-top: 8em;
 }
 
 #because {
@@ -130,33 +172,31 @@ nav a:hover {
 
 #we-have-professors img{
     max-width: 50%;
-    margin-bottom: 5em;
 }
 
 #our-students-our-priority img{
     max-width: 80%;
-    padding: 5em;
-    margin-bottom: 5em;
+    padding: 80px;
 }
 
 #why-we-are-the-best {
-    padding: 5em;
+    padding: 80px;
 }
 
 #why-we-are-the-best-heading {
     margin-top: 2.5em;
     margin-bottom: 2em;
-    font-size: xx-large;
+    font-weight: bolder;
     box-shadow: black;
 }
 
 #why-we-are-the-best img {
-    max-width: 70%;
-    margin-bottom: 5%;
+    max-width: 60%;
 }
 
 #not-convinced {
-    margin-bottom: 10em;
+    margin-top: 6em;
+    margin-bottom: 5em;
 }
 
 #images {
@@ -167,15 +207,33 @@ nav a:hover {
     padding: 10em;
     padding-top: 0em;
     padding-bottom: 4em;
+    display: block;
+    margin: 0 auto;
 }
 
 #faculties-section img{
-    width: 50vw;
-    height: 50vh;
+    width: 350px;
+    height: 350px;
+}
+
+#computer-science-image::after {
+    content: '';
+}
+
+#computer-science-image:hover::after {
+    cursor: pointer;
+    position: absolute;
+    background: var(--secondary);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #become-a-smartanian {
-    padding: 10em;
+    padding: 5em;
     background-color: var(--secondary);
     margin-bottom: 4em;
 }
@@ -195,7 +253,6 @@ nav a:hover {
 
 #news .contrast-box {
     border-radius: 25px;
-    /* box-shadow: ; */
 }
 
 #news .grid{
@@ -204,22 +261,22 @@ nav a:hover {
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
     align-items: center;
-    padding: 10em;
     padding-top: 0;
-    gap: 5em;
+    padding: 10em;
+    gap: 50px;
 }
 
 #second-item {
     grid-column: 2/4;
     background-color: var(--primary);
     color: var(--contrast);
-    padding: 4em;
+    padding: 2em;
     text-align: center;
 }
 
 #third-item {
     text-align: center;
-    padding: 4em;
+    padding: 2em;
     background-color: var(--primary);
     color: var(--contrast);
 }
@@ -262,9 +319,20 @@ footer {
     text-align: center;
 }
 
+#call-to-action {
+    padding: .9em;
+    margin-left: 2em;
+}
+
+#get-in-touch .links {
+    border: none;
+    margin-right: 20%;
+}
+
 #get-in-touch img {
     width: 3.5em;
     margin-right: 1em;
+    border-radius: 100%;
 }
 
 #google-maps {
@@ -284,4 +352,36 @@ footer {
 #google-maps img {
     margin-top: 1em;
     max-width: 11em;
+}
+
+@media screen and (max-width: 850px) {
+    nav a {
+        font-size: small;
+        padding: 5px;
+    }
+
+    #become-a-smartanian .flex {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #first-item {
+        grid-column: 1/4;
+        width: 100%;
+    }
+
+    #second-item {
+        grid-column: 1/4;
+    }
+
+    #third-item {
+        grid-column: 1/4;
+        width: 100%;
+    }
+
+    #fourth-item {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
 }
